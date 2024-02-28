@@ -463,6 +463,23 @@
                     console.log(status);
                 });
         }
+	function loadCase(caseid) {
+ 
+         $.ajax({
+             url: 'http://localhost:8080/apiCaseId',
+             crossDomain: true,
+             method: 'post',
+             headers: {
+                 'accept': 'application/json'
+             },
+             contentType: 'application/json',
+             data: JSON.stringify({
+                 'caseId': caseid
+             })
+         }).done(function (response) {
+             console.log(response);
+         });          
+     }
 
 	</script>
 
