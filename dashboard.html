@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Legal Research Assistant</title>
+		<link rel="stylesheet" href="css/common-style.css">
+		<link rel="stylesheet" href="css/themify-icons.css">
+		
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+		
+		<!-- bootstrap js -->		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.bundle.js"></script> 
+		
+		<!-- Google Red Hat Display -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,600&display=swap" rel="stylesheet">
+		
+		<!-- Fontawesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<!-- Multi Select css and JS -->
+		<script type="text/javascript" src="assets/js/bootstrap-multiselect.js"></script>
+		<link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
+		
+		<!-- Data table code -->
+		<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script> 
+		<script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script> 
+		<script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script> 
+		<script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.html5.min.js"></script> 
+		<script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.print.min.js"></script> 
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+
+
+		<script>
+
+
+			var aCaseItems = [
+				{
+					"caseno": "1024",
+					"lawyer": "Fali Sam Nariman",
+					"casetype": "Civil law",
+					"judge": "DAS J. aaa",
+					"status": "closed",
+					"summary": "The appeal case number 182 of 1952 is about an appellant, Hoosein Kasam Dada (India) Ltd., who submitted a Sales Tax return to the Sales Tax Officer, Akola. \nThe officer, not being satisfied with the account books produced by the appellant, submitted the case to the Assistant Commissioner of Sales Tax, Amravati, for assessment. \nThe Assistant Commissioner issued a notice under section 11 and fixed the case for disposal. After several proceedings, the Assistant Commissioner assessed the appellant to the sum of Rs. 58,657140.\n The appellant appealed to the Sales Tax Commissioner, Madhya Pradesh, under section 22(l) of the Central Provinces and Berar Sales Tax Act, 1947. \nHowever, the appeal was not admitted as it was not accompanied by any proof of the payment of the tax. The appellant then moved the Board of Revenue, Madhya Pradesh, by a revision application against the order of the Sales Tax Commissioner. \nThe High Court dismissed the application and the appellant applied for leave to appeal to the Supreme Court. \nThe Supreme Court granted special leave to appeal, but limited to the question of the effect of the amendment to section 22 of the Act on the appellant's appeal to the Sales Tax Commissioner, Madhya Pradesh."
+				},
+				{
+					"caseno": "2728",
+					"lawyer": "Mukul Rohatgi",
+					"casetype": "Criminal law",
+					"judge": "BHAGWATI J",
+					"status": "closed",
+					"summary": "The Civil Appeal No. 2728 of 1972 revolves around the question of whether there was any material evidence to justify the finding that a sum of Rs. 1,07,350 was remitted by the appellant firm, M/s. Kishinchand Chellaram, from Madras to Bombay, and that it represented the undisclosed income of the firm.\nThe firm had challenged the decision of the Bombay High Court, which had upheld the Income Tax Officer's view that the firm failed to satisfactorily explain the source of the remittance, resulting in it being added to the firm's taxable income.\nHowever, the Supreme Court ruled that the evidence relied upon by the Income Tax Officer and the High Court, namely two letters from the Punjab National Bank Limited, did not constitute material evidence justifying the decision. \nThe court highlighted that the letters were not supported by any documents or papers and were based on hearsay. \nThe Supreme Court concluded that the highest evidence that could be established was that an employee of the firm remitted the amount to another employee, but it didn't necessarily imply that the amount belonged to the firm. \nThe burden was on the revenue to prove that the remitted amount belonged to the firm, which they failed to do.\n The Supreme Court thus allowed the appeal, setting aside the judgement of the High Court."
+				},
+				{
+					"caseno": "3529",
+					"lawyer": "K k venugopal",
+					"casetype": "Employment law",
+					"judge": "Khanna, J. V. R. Krishna Iyer",
+					"status": "next hearing",
+					"summary": "The appeal case number 910 of 1970 concerns the election of Jugal Kishore Patnaik to the Orissa Legislative Assembly from Bhadrak constituency, which was declared void by the Orissa High Court due to an election petition filed by Ratnakar Mohanty.\nThe High Court found that Mohanty's nomination papers had been improperly rejected by the Returning Officer, due to an objection that Mohanty was disqualified under section 9A of the Representation of the People Act, 1951, for having contracts with the Government of Orissa.\n The Supreme Court of India dismissed the appeal, upholding the High Court's decision, stating that Mohanty's contracts were not personal, but were undertaken as the Sarpanch of Rahanj Gram Panchayat, and therefore, he was not disqualified from running for election. \nThe Supreme Court's judgment highlighted the need for clearer electoral regulations to prevent such misunderstandings from occurring."
+				},
+				{
+					"caseno": "4120",
+					"lawyer": "Abhishek Singhvi",
+					"casetype": "Family law",
+					"judge": "VENKATARAMIAH, J.",
+					"status": "closed",
+					"summary": "The Civil Appeal No. 2005 of 1978 was filed under section 123 of the Jammu and Kashmir Representation of People Act, 1957, challenging the dismissal of an election petition due to non-compliance with section 89(3) of the Act.\n The appellant and respondent were candidates in the 1977 general election for the Handwara Assembly Constituency, with the respondent being declared the successful candidate. \nThe appellant subsequently filed an election petition challenging the validity of the respondent's election on various grounds.\n The High Court dismissed the petition on the grounds that the appellant had not complied with section 89(3) of the Act, which requires that every copy of the election petition be attested by the petitioner under his own signature to be a true copy of the petition.\n The Supreme Court upheld the High Court's decision, stating that the requirement for the petitioner to attest the copies of the petition under his own signature is mandatory, and non-compliance results in the dismissal of the petition as per section 94 of the Act. The appeal was therefore dismissed."
+				},
+				{
+					"caseno": "6991",
+					"lawyer": "Gopal Subramanium",
+					"casetype": "Civil law",
+					"judge": "MOHAN, J",
+					"status": "dismissal of suit",
+					"summary": "The case, Appeal Nos. 266 267 of 1993, centers on a charge memorandum issued against the respondent, who was working as an Income Tax Officer, Muktsar in 1982-83.\n The memorandum alleges that the respondent completed certain assessments in an irregular manner, hastily, and with the intent to confer undue favors on the assessees.\n The Central Administrative Tribunal Principal Bench, New Delhi ruled in favor of the respondent and quashed the charge memorandum, leading to the current appeal. \nThe Supreme Court of India reversed the Tribunal's decision, upholding the validity of the charge memorandum.\n The Court concluded that disciplinary action can be taken in cases where the officer had acted in a manner that reflects negatively on his reputation for integrity, good faith or devotion to duty, or if there's evidence of recklessness, misconduct, negligence or undue favoritism in the discharge of his duty. \nThe court emphasized that the disciplinary action is not based on the correctness or legality of the respondent's decision, but on his conduct in discharging his duties.\n The court made it clear that the respondent can put forth all defenses open to him in the departmental inquiry which will be considered on its merit."
+				},
+				{
+					"caseno": "5871",
+					"lawyer": "Mahesh Jethmalani",
+					"casetype": "Criminal law",
+					"judge": "VENKATACHALIAH, J.",
+					"status": "dismissal of suit",
+					"summary": "The petition under Article 32 of the Indian Constitution questions the validity of Regulation 7 along with Schedule I of State Bank of Patiala (Officers') Service Regulations,1979.\n It concerns the placement and fitment of existing officers in the new grades and scales of pay. The State Bank of Patiala, a subsidiary of the State Bank of India, revised and restructured pay scales based on the recommendations of the Pillai Committee.\nThe petitioners, Sri Tarsem Lal Gautam and Sri C. V. Madan, who are Grade A officers, challenged the classification of existing officers into different categories for fitment in the revised pay scales based solely on the date of their promotion as arbitrary and violative of Article 14 of the Constitution of India. \nThe bank argued that the Regulations did not bring about a mere revision of pay, but a rationalisation, standardisation and restructuring of the whole administrative set-up of the management cadres.\n The court ruled that the principle of classification among the existing officers for purposes of fitment was not unreasonable and arbitrary, and therefore, not violative of Article 14. The petition was dismissed."
+				},
+				{
+					"caseno": "4136",
+					"lawyer": "KTS Tulsi",
+					"casetype": "Employment law",
+					"judge": "BHAGWATI, J",
+					"status": "closed",
+					"summary": "The appeals concern the valuation of shares of Mafatlal Gagalbhai Pvt. Ltd., an investment company. \nThe appellant, Pritam Singh, was elected to the Haryana State Legislative Assembly in 1972, but his election was challenged by respondent Balbir Singh on the grounds that Singh committed corrupt practices, including the hiring of vehicles for free conveyance of electors to polling stations.\n The main issue was the method of valuation of the company's shares. The Gift Tax and Wealth Tax officers used the break-up method, which the appellant contested, advocating for the profit-earning method instead.\n The Appellate Assistant Commissioner applied a combination of both methods, resulting in a higher valuation than the appellant claimed.\n The appellant appealed to the Tribunal, which ruled in favor of the profit-earning method, rejecting the combination method. The Revenue appealed to the Supreme Court, arguing that the High Court should have called for a reference on the question of the appropriate method of valuation.\n The Supreme Court dismissed the appeal, upholding the Tribunal's decision. The court stated that the profit-earning method was the appropriate method for valuing shares of a going concern and that the combination of the two methods was not a valid principle of valuation.\n The court also dismissed the Revenue's argument that the break-up method should apply due to a rule in the Gift Tax Act, as the question was not raised before the Tribunal."
+				},
+				{
+					"caseno": "1771",
+					"lawyer": "Aryama Sundaram",
+					"casetype": "Employment law",
+					"judge": "AYYANGAR J. SHAH, J",
+					"status": "dismissal of suit",
+					"summary": "The appellant owned several estates where tea was grown and was assessed to sales tax for the years 1954-55 and 1955-56.\n The appellant claimed that certain sales of its tea conducted by auction at Fort Cochin, a place then in the Madras State, were sales outside the Travancore Cochin State and therefore exempt from taxation.\n This claim was rejected by the assessing authority, the Appellate Assistant Commissioner, and the Sales Tax Appellate Tribunal. The appellant appealed to the Supreme Court, arguing that the High Court should have called for a reference on the question of the appropriate method of valuation.\n The Supreme Court dismissed the appeal, ruling that the profit-earning method was the appropriate method for valuing shares of a going concern and that the combination of the two methods was not a valid principle of valuation.\n The court also dismissed the Revenue's argument that the break-up method should apply due to a rule in the Gift Tax Act, as the question was not raised before the Tribunal.\n The Supreme Court concluded that the present appeals dependent on the correctness of the meaning of the expression 'outside sales' in article 286(1)(a), which the High Court adopted in A. V. Thomas's case, had to be allowed.\n The court also declined to permit the respondent to argue a point about the property in the goods not having passed at Fort Cochin in the Madras State, as the point was not raised before the High Court.\n The appeals were thus allowed and the order of the High Court reversed."
+				},
+				{
+					"caseno": "2031",
+					"lawyer": "Ramayya",
+					"casetype": "Family law",
+					"judge": "Justice Surya Kant",
+					"status": "case dismissed",
+					"summary": "The appeal case number 116 of 1964 pertains to the election of Jugal Kishore Patnaik to the Orissa Legislative Assembly from Bhadrak constituency.\n This election was declared void by the Orissa High Court due to an election petition filed by Ratnakar Mohanty. Mohanty claimed that his nomination papers were improperly rejected by the Returning Officer, leading to the invalidation of the election.\n The case reached the Supreme Court of India, which dismissed the appeal and upheld the High Court's decision.\n The Supreme Court emphasized the need for clearer electoral regulations to avoid similar misunderstandings in the future.\nThe court noted that the jurisdiction of civil courts can be excluded by a statutory provision, however, it does not necessarily mean that the plea against the validity of the order passed by the District Magistrate cannot be raised in a civil court.\n The case highlighted the complexities in the electoral law and the need for its reform."
+				}
+			];
+
+			$(document).ready(function () {
+                var aHtmlStr = "";
+                $.each(aCaseItems, function (i, item) {
+                    aHtmlStr += "<tr>"
+                        + "<td><span><a href='chat.html?caseid=" + item.caseno +"'>" + item.caseno + "</a></span></td>"
+                        + "<td><span>" + item.lawyer + "</span></td>"
+                        + "<td><span>Victor Jhon</span></td>"
+                        + "<td><span>" + item.casetype + "</span></td>"
+                        + "<td><span>Kerala Hight Court</span></td>"
+                        + "<td><span>" + item.judge + "</span></td>"
+                        + "<td><span class='status - blue'>" + item.status + "</span></td>"
+                        + "</tr>";
+
+                });
+                $("#tblCase").html(aHtmlStr);
+			});
+			
+
+
+		</script>
+
+	</head>
+	<body>
+		<div class="wrapper">	
+			<div class="app-container">	
+				<header class="header-fixed nav-bar-head">
+					<div class="logo-account-hold">
+						<div class="left-app-logo">
+							<img src="images/logo-application.png" alt="Legal Research Assistant" title="Legal Research Assistant" class="logo-main" />
+							<img src="images/wipro-logo.png" alt="Wipro" title="Wipro" class="logo-parent" />
+						</div>
+						<div class="right-app-account">
+							<div class="notify-hold user-hold">							
+								<div class="user-sec">
+									<div class="account-right">
+										<ul>			
+											<li>
+												<ul id="menu-log">
+													<li>
+														<input id="check01" type="checkbox" name="menu">
+														<label for="check01"><span class="uname-dp">AB</span>Aditya Bhuvan</label>
+														<ul class="submenu">		
+															<li><div class="submenu-dp">AB</div></li>
+															<li><a href="profile.html"><span><i class="fa fa-user" aria-hidden="true"></i></span>My Profile</a></li>
+															<li><a href="login.html"><span><i class="fa fa-sign-out" aria-hidden="true"></i></span>Logout</a></li>
+														</ul>
+													</li>
+												</ul>				
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>	
+						</div><!-- right-app-account -->
+					</div><!-- logo-account-hold -->
+					<div class="main-menu-section">
+						<ul class="nav-dark">
+							<li><a href="home.html">Home</a></li>
+							<li><a href="dashboard.html" class="active">Dashboard</a></li>
+							<li><a href="summary.html">Summary</a></li>
+						</ul>
+					</div>
+				</header>				
+				
+				<main class="body-wrapper">						
+					<div class="content-wrapper right-main-containr">
+						
+						<h2 class="page-head">Welcome to Legal Case Dashboard</h2>
+						
+						<div class="main-data-hold">
+							<div class="app-main-wrapper">
+								<div class="inn-main-hold">																		
+									<div class="section-wrapper">
+										<div class="section-content d-none">
+											<div class="row">
+												<div class="col-md-2">
+													<div class="form-group chm-formgroup FilterBlue">
+														<select id="CaseNumberFilter" name="Customer group" class="form-control chm-formselect">
+															<option value="csno1">Case No.</option>
+															<option value="csno1">1024</option>
+															<option value="csno1">1025</option>
+															<option value="csno1">1026</option>
+														</select>
+													</div>
+												</div>
+												
+												<div class="col-md-2">
+													<div class="form-group chm-formgroup FilterBlue">
+														<select id="CaseNumberFilter" name="Customer group" class="form-control chm-formselect">
+															<option value="csno1">Type</option>
+															<option value="csno1">Contract Dispute</option>
+															<option value="csno1">XXXXXXXXXX</option>
+															<option value="csno1">XXXXXXXXXX</option>
+														</select>
+													</div>
+												</div>
+												
+												<div class="col-md-2">
+													<div class="form-group chm-formgroup FilterBlue">
+														<select id="CaseNumberFilter" name="Customer group" class="form-control chm-formselect">
+															<option value="csno1">Court</option>
+															<option value="csno1">Kerala Hight Court</option>
+															<option value="csno1">Bengaluru District Court</option>
+															<option value="csno1">Maharastra Civil Court</option>
+														</select>
+													</div>
+												</div>
+												
+												<div class="col-md-2">
+													<div class="form-group chm-formgroup FilterBlue">
+														<select id="CaseNumberFilter" name="Customer group" class="form-control chm-formselect">
+															<option value="csno1">Status</option>
+															<option value="csno1">In Progress</option>
+															<option value="csno1">Completed</option>
+														</select>
+													</div>
+												</div>
+												
+											</div>
+										</div>
+										<div class="section-content">
+											<div class="row">
+												<div class="col-md-12">
+													<table id="employeemaster" class="table table-bordered table-striped table-cust-new d-table dataTableRule ">
+														<thead>
+															<tr>
+																<th class="thd-w10">
+																	<span>Case No.</span>
+																	<div class="form-group chm-formgroup TableFilterForm d-none">
+																		<select id="CaseNumberFilter" name="Customer group" class="form-control chm-formselect">
+																			<option value="csno1">Case No.</option>
+																			<option value="csno1">1024</option>
+																			<option value="csno1">1025</option>
+																			<option value="csno1">1026</option>
+																		</select>
+																	</div>
+																</th>
+																<th class="thd-w15">
+																	<span>Client Name</span>
+																	<div class="form-group chm-formgroup TableFilterForm  d-none">
+																		<select id="ClientNamerFilter" name="Customer group" class="form-control chm-formselect">
+																			<option value="cname1">Client Name</option>
+																			<option value="cname2">Sahil Sameer</option>
+																			<option value="cname3">Rahul Nambiar</option>
+																			<option value="cname4">Adinarayana</option>
+																		</select>
+																	</div>
+																</th>
+																<th class="thd-w15">
+																	<span>Opposing Party</span>
+																	<div class="form-group chm-formgroup TableFilterForm  d-none">
+																		<select id="OpPartyFilter" name="Customer group" class="form-control chm-formselect">
+																			<option value="cname1">Opposing Party</option>
+																			<option value="cname2">Victor Jhon</option>
+																			<option value="cname3">Kavya Kumar</option>
+																			<option value="cname4">Ashish Hegde</option>
+																		</select>
+																	</div>
+																</th>
+																<th class="thd-w15">
+																	<span>Case Type</span>
+																	<div class="form-group chm-formgroup TableFilterForm  d-none">
+																		<select id="CaseTypeFilter" name="Customer group" class="form-control chm-formselect">
+																			<option value="cname1">Case Type</option>
+																			<option value="cname2">Contract Dispute</option>
+																			<option value="cname3">XXXXXXXXX</option>
+																			<option value="cname4">XXXXXXXXX</option>
+																		</select>
+																	</div>
+																</th>
+																<th class="thd-w20">
+																	<span>Court Details</span>
+																	<div class="form-group chm-formgroup TableFilterForm  d-none">
+																		<select id="CourtDetailsFilter" name="Customer group" class="form-control chm-formselect">
+																			<option value="cdt1">Court Details</option>
+																			<option value="cdt2">Kerala High Court</option>
+																			<option value="cdt3">Bengaluru District Court</option>
+																			<option value="cdt4">Karnataka High Court</option>
+																		</select>
+																	</div>
+																</th>
+																<th class="thd-w15">
+																	<span>Judge</span>
+																	<div class="form-group chm-formgroup TableFilterForm  d-none">
+																		<select id="JudgeFilter" name="Customer group" class="form-control chm-formselect">
+																			<option value="judg1">Judge</option>
+																			<option value="judg2">Ramnarayana</option>
+																			<option value="judg3">Chandrika KT</option>
+																			<option value="judg4">Praveen RK</option>
+																		</select>
+																	</div>
+																</th>
+																<th class="thd-w10">
+																	<span>Status</span>
+																	<div class="form-group chm-formgroup TableFilterForm  d-none">
+																		<select id="StatusFilter" name="Customer group" class="form-control chm-formselect">
+																			<option value="stts1">Status</option>
+																			<option value="stts2">In Progress</option>
+																			<option value="stts3">Completed</option>
+																			<option value="stts4">Hold</option>
+																		</select>
+																	</div>
+																</th>
+															</tr>
+														</thead>
+														<tbody id="tblCase">
+															<!--<tr>
+																<td><span>1024</span></td>
+																<td><span>Rahul Nambiar</span></td>		
+																<td><span>Victor Jhon</span></td>
+																<td><span>Contract Dispute</span></td>	
+																<td><span>Kerala Hight Court</span></td>	
+																<td><span>Navneet Raj</span></td>	
+																<td><span class="status-blue">In Progress</span></td>
+															</tr>
+															<tr>
+																<td><span>1025</span></td>
+																<td><span>Rahul Nambiar</span></td>		
+																<td><span>Victor Jhon</span></td>
+																<td><span>Contract Dispute</span></td>	
+																<td><span>Kerala Hight Court</span></td>	
+																<td><span>Navneet Raj</span></td>	
+																<td><span class="status-blue">In Progress</span></td>
+															</tr>
+															<tr>
+																<td><span>1177</span></td>
+																<td><span>Rahul Nambiar</span></td>		
+																<td><span>Victor Jhon</span></td>
+																<td><span>Contract Dispute</span></td>	
+																<td><span>Kerala Hight Court</span></td>	
+																<td><span>Navneet Raj</span></td>	
+																<td><span class="status-blue">In Progress</span></td>
+															</tr>
+															<tr>
+																<td><span>1008</span></td>
+																<td><span>Rahul Nambiar</span></td>		
+																<td><span>Victor Jhon</span></td>
+																<td><span>Contract Dispute</span></td>	
+																<td><span>Kerala Hight Court</span></td>	
+																<td><span>Navneet Raj</span></td>	
+																<td><span class="status-blue">In Progress</span></td>
+															</tr>
+															<tr>
+																<td><span>1504</span></td>
+																<td><span>Rahul Nambiar</span></td>		
+																<td><span>Victor Jhon</span></td>
+																<td><span>Contract Dispute</span></td>	
+																<td><span>Kerala Hight Court</span></td>	
+																<td><span>Navneet Raj</span></td>	
+																<td><span class="status-green">Completed</span></td>
+															</tr>
+															<tr>
+																<td><span>1024</span></td>
+																<td><span>Rahul Nambiar</span></td>		
+																<td><span>Victor Jhon</span></td>
+																<td><span>Contract Dispute</span></td>	
+																<td><span>Kerala Hight Court</span></td>	
+																<td><span>Navneet Raj</span></td>	
+																<td><span class="status-blue">In Progress</span></td>
+															</tr>
+															<tr>
+																<td><span>1024</span></td>
+																<td><span>Rahul Nambiar</span></td>		
+																<td><span>Victor Jhon</span></td>
+																<td><span>Contract Dispute</span></td>	
+																<td><span>Kerala Hight Court</span></td>	
+																<td><span>Navneet Raj</span></td>	
+																<td><span class="status-blue">In Progress</span></td>
+															</tr>
+															<tr>
+																<td><span>1044</span></td>
+																<td><span>Rahul Nambiar</span></td>		
+																<td><span>Victor Jhon</span></td>
+																<td><span>Contract Dispute</span></td>	
+																<td><span>Kerala Hight Court</span></td>	
+																<td><span>Navneet Raj</span></td>	
+																<td><span class="status-green">Completed</span></td>
+															</tr>
+															<tr>
+																<td><span>1097</span></td>
+																<td><span>Rahul Nambiar</span></td>		
+																<td><span>Victor Jhon</span></td>
+																<td><span>Contract Dispute</span></td>	
+																<td><span>Kerala Hight Court</span></td>	
+																<td><span>Navneet Raj</span></td>	
+																<td><span class="status-blue">In Progress</span></td>
+															</tr>
+															<tr>
+																<td><span>1024</span></td>
+																<td><span>Rahul Nambiar</span></td>		
+																<td><span>Victor Jhon</span></td>
+																<td><span>Contract Dispute</span></td>	
+																<td><span>Kerala Hight Court</span></td>	
+																<td><span>Navneet Raj</span></td>	
+																<td><span class="status-blue">In Progress</span></td>
+															</tr>
+															<tr>
+																<td><span>1044</span></td>
+																<td><span>Rahul Nambiar</span></td>		
+																<td><span>Victor Jhon</span></td>
+																<td><span>Contract Dispute</span></td>	
+																<td><span>Kerala Hight Court</span></td>	
+																<td><span>Navneet Raj</span></td>	
+																<td><span class="status-green">Completed</span></td>
+															</tr>
+															<tr>
+																<td><span>1097</span></td>
+																<td><span>Rahul Nambiar</span></td>		
+																<td><span>Victor Jhon</span></td>
+																<td><span>Contract Dispute</span></td>	
+																<td><span>Kerala Hight Court</span></td>	
+																<td><span>Navneet Raj</span></td>	
+																<td><span class="status-blue">In Progress</span></td>
+															</tr>
+															<tr>
+																<td><span>1024</span></td>
+																<td><span>Rahul Nambiar</span></td>		
+																<td><span>Victor Jhon</span></td>
+																<td><span>Contract Dispute</span></td>	
+																<td><span>Kerala Hight Court</span></td>	
+																<td><span>Navneet Raj</span></td>	
+																<td><span class="status-blue">In Progress</span></td>
+															</tr>
+															<tr>
+																<td><span>1044</span></td>
+																<td><span>Rahul Nambiar</span></td>		
+																<td><span>Victor Jhon</span></td>
+																<td><span>Contract Dispute</span></td>	
+																<td><span>Kerala Hight Court</span></td>	
+																<td><span>Navneet Raj</span></td>	
+																<td><span class="status-green">Completed</span></td>
+															</tr>-->														
+														</tbody>
+													</table>	
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- inn-main-hold -->
+							</div><!-- app-main-wrapper -->					
+						</div>						
+						<footer class="tne-app-footer">	
+							<div class="footer-custom"><p>Copyright &copy; 2021-2022. All rights reserved.</p> <p><span class="mr-2">WIPRO Legal Research Assistant</span></p></div>
+						</footer>						
+					</div><!-- right-main-containr -->	
+				</main>
+			</div>	
+		</div>
+
+		<script>			
+			$(document).ready(function() {
+				$('.dataTableRule').dataTable( {
+					"aLengthMenu": [[10, 15, -1], [10, 15, "All"]],
+					"pageLength": 10
+				} );
+			} );
+		</script>
+	</body>
+</html>									
